@@ -29,6 +29,23 @@ Open the Aspire dashboard URL printed by AppHost.
 2. In dashboard metrics for the consumer process, compare successful receive telemetry to failed receive behavior.
 3. The issue reproduces if failed consume attempts do not generate `messaging.receive.duration` and `messaging.receive.messages` with error attributes.
 
+## Expected result
+
+Failed consume attempts should still emit receive metrics for the consumer, with the failure captured through error attributes such as `error.type`.
+Note: This scenario as tested with fix from https://github.com/microsoft/aspire/pull/17658.
+
+- Reference image: [Results/Expected.png](./Results/Expected.png)
+
+![Expected result](./Results/Expected.png)
+
+## Actual result
+
+The current behavior only shows the successful receive metric point. The failed consume path logs `ConsumeException`, but the corresponding `messaging.receive.duration` and `messaging.receive.messages` telemetry is missing from the dashboard.
+
+- Reference image: [Results/Actual.png](./Results/Actual.png)
+
+![Actual result](./Results/Actual.png)
+
 ## Projects
 
 - `AspireKafkaConsumeExceptionRepro.AppHost`: declares Kafka resource and wires references.
