@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-AspireKafkaConsumeExceptionRepro.Consumer-ca639edf-1b48-4005-ae3a-0fe306b08137</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Confluent.Kafka" Version="13.3.5" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspireKafkaConsumeExceptionRepro.ServiceDefaults\AspireKafkaConsumeExceptionRepro.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>

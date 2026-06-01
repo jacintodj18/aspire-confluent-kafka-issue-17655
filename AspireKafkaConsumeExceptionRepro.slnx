@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AspireKafkaConsumeExceptionRepro.AppHost/AspireKafkaConsumeExceptionRepro.AppHost.csproj" />
+  <Project Path="AspireKafkaConsumeExceptionRepro.Consumer/AspireKafkaConsumeExceptionRepro.Consumer.csproj" />
+  <Project Path="AspireKafkaConsumeExceptionRepro.Producer/AspireKafkaConsumeExceptionRepro.Producer.csproj" />
+  <Project Path="AspireKafkaConsumeExceptionRepro.ServiceDefaults/AspireKafkaConsumeExceptionRepro.ServiceDefaults.csproj" />
+</Solution>
